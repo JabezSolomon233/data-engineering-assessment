@@ -1,0 +1,18 @@
+{
+  "info": { "name": "DE Assessment API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {"mode":"raw","raw":"{ \"first_name\": \"John\", \"last_name\": \"Doe\", \"email\": \"john@example.com\" }"},
+        "url": {"raw":"http://127.0.0.1:8000/users","host":["http://127.0.0.1:8000"], "path":["users"]}
+      }
+    },
+    { "name":"List Users","request":{"method":"GET","url":{"raw":"http://127.0.0.1:8000/users","host":["http://127.0.0.1:8000"],"path":["users"]}} },
+    { "name":"Get User","request":{"method":"GET","url":{"raw":"http://127.0.0.1:8000/users/1","host":["http://127.0.0.1:8000"],"path":["users","1"]}} },
+    { "name":"Add Employment","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{ \"company_name\": \"TCS\", \"designation\": \"Dev\" }"},"url":{"raw":"http://127.0.0.1:8000/users/1/employment","host":["http://127.0.0.1:8000"],"path":["users","1","employment"]}} },
+    { "name":"Add Bank","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{ \"bank_name\": \"HDFC\", \"account_number\": \"123\" }"},"url":{"raw":"http://127.0.0.1:8000/users/1/bank","host":["http://127.0.0.1:8000"],"path":["users","1","bank"]}} }
+  ]
+}
